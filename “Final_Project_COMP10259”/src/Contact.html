@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css1/style.css">  
+    </head>
+    <body>
+        
+        <div class="shade">
+            <div class="blackboard">
+                <div class="form">
+                    <form action="https://formspree.io/f/mrgdnopk" method="POST">
+            <form name="contactUs" onsubmit="validatefirstname()">
+                <h1>Contact Us</h1>
+            <p>
+            <Label>First Name: </Label>
+            <input type="text" id="firstname" placeholder="Enter at least 5 characters" name="firstn"><br></p>
+            <p>
+            <Label>Last Name: </Label>
+            <input type="text" id="lastname" placeholder="Enter at least 5 characters" name="lastn" onchange="validatelastname(this)"><br></p>
+            <p>
+            <Label>Email: </Label>
+            <input type="email" id="email" pattern=+@.com name="email" placeholder="abcd@gmail.com" onchange="validateemail(this)"><br></p>
+            <p>
+            <Label>Date: </Label>
+            <input type="date" name="begin" placeholder="dd-mm-yyyy" name="date" onchange="validatedate(this)"><br></p>
+            <p>
+            <Label>Phone: </Label>
+            <input type="tel" id="phone" name="phone" pattern="(+1)[1]{+1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+1-123-123-1234"required name="phone" onchange="validatephone(this)"><br></p>
+            <p>
+            <Label>Message: </Label>
+            <input type="text" id="message" name="message" onchange="validatemessage(this)" required minlength="50" maxlength="60"><br></p>
+            <p>
+            <input type="submit" value="Submit"></p>
+        </form></form>
+        </div>
+        </div>
+      <script>
+        function validatelastname(fieldlastname)
+        {
+            var lastn=fieldlastname.value;
+            if(lastn=="")
+            {
+                alert("Last name must be filled")
+            }
+        }
+      function validateemail(fieldemail)
+      {
+        var email=fieldemail.value;
+        if(email=="")
+        {
+            alert("Please enter email id")
+        }
+      }
+     function validatedate(fielddate)
+     {
+        var date=fielddate.value;
+        if(date=="")
+        {
+            alert("Date must be filled")
+        }
+     }
+     function validatephone(fieldphone)
+     {
+        if(phone=="")
+        {
+            alert("Phone number must be filled")
+        }
+     }
+     function validatemessage(fieldmessage)
+     {
+        id(message=="")
+        {
+            alert("Please fill out the message")
+        }
+     }
+
+
+       function validatefirstname()
+       {
+        let firstname=document.forms["contactUs"]["firstn"].value;
+        if(firstname=="")
+        {
+            alert("First Name must be filled");
+        }
+       }
+       
+      </script>
+    </body>
+</html>

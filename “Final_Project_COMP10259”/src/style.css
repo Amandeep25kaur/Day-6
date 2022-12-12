@@ -1,0 +1,19 @@
+.header .nav ul li a {
+  color: yellow;
+}
+
+.header .nav ul li a:hover {
+  color: white;
+}
+
+.header {
+  background-color: red;
+}
+
+.header {
+  position: fixed;
+}
+
+.div1 {
+  border: 1px dashed brown;
+}/*# sourceMappingURL=style.css.map */
